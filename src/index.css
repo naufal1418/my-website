@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* Light mode background - White */
+    --foreground: 240 10% 3.9%; /* Light mode text - Dark Gray/Black */
+
+    --card: 0 0% 96%; /* Light mode card - Light Gray */
+    --card-foreground: 240 10% 3.9%; /* Light mode card text */
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 262 80% 50%; /* Adjusted primary for better light mode contrast */
+    --primary-foreground: 0 0% 98%; /* Text on primary elements */
+
+    --secondary: 250 30% 90%; /* Light mode secondary - Very Light Purple/Gray */
+    --secondary-foreground: 262 80% 40%; /* Text on secondary elements */
+
+    --muted: 240 5% 90%; /* Light mode muted - Light Gray */
+    --muted-foreground: 240 5% 45%; /* Light mode muted text */
+
+    --accent: 262 80% 60%; /* Light mode accent - Purple */
+    --accent-foreground: 0 0% 98%; /* Text on accent elements */
+
+    --destructive: 0 70% 50%; /* Destructive color for light mode */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5% 85%; /* Light mode border */
+    --input: 0 0% 93%; /* Light mode input background */
+    --ring: 262 80% 55%; /* Ring focus color for light mode */
+
+    --radius: 0.75rem;
+
+    /* Custom portfolio colors for light mode */
+    --portfolio-background: 0 0% 97%; /* Off-white */
+    --portfolio-primary: 262 75% 55%; /* Vibrant Purple */
+    --portfolio-secondary: 262 60% 75%; /* Lighter Purple */
+    --portfolio-accent: 262 80% 65%; /* Medium Purple for text/highlights */
+    --portfolio-card: 0 0% 100%; /* White for cards */
+    --portfolio-card-foreground: 240 10% 10%; /* Dark text for cards */
+    --portfolio-muted-foreground: 240 5% 35%; /* Muted text color */
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 250 30% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 262 80% 60%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 250 30% 17%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 5% 25%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 262 80% 70%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5% 20%;
+    --input: 240 5% 15%;
+    --ring: 262 80% 65%;
+
+    /* Custom portfolio colors for dark mode */
+    --portfolio-background: 240 10% 5%; /* Very dark blue/black */
+    --portfolio-primary: 262 80% 60%; /* Vibrant purple */
+    --portfolio-secondary: 250 30% 20%; /* Darker purple */
+    --portfolio-accent: 262 80% 75%; /* Lighter purple/lavender for text or highlights */
+    --portfolio-card: 250 30% 10%; /* Dark purple for cards */
+    --portfolio-card-foreground: 0 0% 92%;
+    --portfolio-muted-foreground: 240 5% 60%; /* Muted text color */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-portfolio-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.6);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary));
+}
+
+/* Ensure inputs and textareas adapt to theme */
+input, textarea {
+    @apply bg-input text-foreground border-border;
+}

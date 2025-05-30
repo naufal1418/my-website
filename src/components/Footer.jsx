@@ -1,21 +1,32 @@
-import React from 'react';
-import { Github, Linkedin, Twitter, Code } from 'lucide-react';
-import { motion } from 'framer-motion';
-import { Link as RouterLink, useLocation, useNavigate } from 'react-router-dom';
-
+import React from "react";
+import { Github, Linkedin, Twitter, Code } from "lucide-react";
+import { motion } from "framer-motion";
+import { Link as RouterLink, useLocation, useNavigate } from "react-router-dom";
 
 const socialLinks = [
-  { name: 'GitHub', icon: <Github className="h-5 w-5" />, href: 'https://github.com/naufaln18' },
-  { name: 'LinkedIn', icon: <Linkedin className="h-5 w-5" />, href: 'https://linkedin.com/in/naufal-nizarudeen' },
-  { name: 'Twitter', icon: <Twitter className="h-5 w-5" />, href: 'https://x.com/NaufalNizar18' }, 
+  {
+    name: "GitHub",
+    icon: <Github className="h-5 w-5" />,
+    href: "https://github.com/naufaln18",
+  },
+  {
+    name: "LinkedIn",
+    icon: <Linkedin className="h-5 w-5" />,
+    href: "https://linkedin.com/in/naufal-nizarudeen",
+  },
+  {
+    name: "Twitter",
+    icon: <Twitter className="h-5 w-5" />,
+    href: "https://x.com/NaufalNizar18",
+  },
 ];
 
 const quickLinks = [
-  { name: 'Home', href: '/', isPage: true },
-  { name: 'Experience', href: '#experience', isPage: false },
-  { name: 'Projects', href: '#projects', isPage: false },
-  { name: 'Education', href: '#education', isPage: false },
-  { name: 'Contact', href: '#contact', isPage: false },
+  { name: "Home", href: "/", isPage: true },
+  { name: "Experience", href: "#experience", isPage: false },
+  { name: "Projects", href: "#projects", isPage: false },
+  { name: "Education", href: "#education", isPage: false },
+  { name: "Contact", href: "#contact", isPage: false },
 ];
 
 const Footer = () => {
@@ -25,18 +36,18 @@ const Footer = () => {
   const scrollToSection = (href) => {
     const section = document.querySelector(href);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+      section.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const handleFooterLinkClick = (e, item) => {
-     if (item.isPage) {
-      if (item.href === '/') window.scrollTo(0,0);
+    if (item.isPage) {
+      if (item.href === "/") window.scrollTo(0, 0);
     } else {
       e.preventDefault();
-      if (location.pathname !== '/') {
-        navigate('/');
-        setTimeout(() => scrollToSection(item.href), 100); 
+      if (location.pathname !== "/") {
+        navigate("/");
+        setTimeout(() => scrollToSection(item.href), 100);
       } else {
         scrollToSection(item.href);
       }
@@ -48,7 +59,11 @@ const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 text-center md:text-left">
           <div className="space-y-3 md:col-span-1 flex flex-col items-center md:items-start">
-            <RouterLink to="/" onClick={() => window.scrollTo(0,0)} className="flex items-center space-x-2 text-xl font-bold text-foreground hover:text-portfolio-primary transition-colors">
+            <RouterLink
+              to="/"
+              onClick={() => window.scrollTo(0, 0)}
+              className="flex items-center space-x-2 text-xl font-bold text-foreground hover:text-portfolio-primary transition-colors"
+            >
               <Code className="h-7 w-7 text-portfolio-primary" />
               <span>Naufal.dev</span>
             </RouterLink>
@@ -58,9 +73,11 @@ const Footer = () => {
           </div>
 
           <div className="md:col-span-1">
-            <p className="font-semibold text-card-foreground mb-3">Quick Links</p>
+            <p className="font-semibold text-card-foreground mb-3">
+              Quick Links
+            </p>
             <ul className="space-y-2">
-              {quickLinks.map(link => (
+              {quickLinks.map((link) => (
                 <li key={link.name}>
                   {link.isPage ? (
                     <RouterLink
@@ -107,11 +124,12 @@ const Footer = () => {
         </div>
         <div className="border-t border-border pt-8 text-center">
           <p className="text-sm text-portfolio-muted-foreground">
-            &copy; {new Date().getFullYear()} Naufal Nizarudeen. All rights reserved.
+            &copy; {new Date().getFullYear()} Naufal Nizarudeen. All rights
+            reserved.
           </p>
-          <p className="text-xs text-portfolio-muted-foreground mt-1">
+          {/* <p className="text-xs text-portfolio-muted-foreground mt-1">
             Built with React, Tailwind CSS, and Framer Motion. Hosted with ❤️.
-          </p>
+          </p> */}
         </div>
       </div>
     </footer>

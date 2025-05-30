@@ -140,7 +140,7 @@ const HeroSection = () => {
           className="hidden md:flex justify-center items-start relative group"
         >
           <motion.img
-            src="/assets/profile.png"
+            src="/assets/images/profile.webp"
             alt="Naufal Nizarudeen"
             className="hidden sm:block z-30 rounded-full object-cover border-4 border-portfolio-primary shadow-xl mb-6 "
             initial={{ opacity: 0, y: -20 }}

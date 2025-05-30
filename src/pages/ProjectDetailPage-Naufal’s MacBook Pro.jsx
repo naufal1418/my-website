@@ -133,7 +133,7 @@ const ProjectDetailPage = () => {
       transition={{ duration: 0.5 }}
       className="bg-portfolio-background text-foreground py-12 md:py-16"
     >
-      <header className="container mx-auto px-4 sm:px-6 lg:px-8 mb-10 md:mb-12">
+      <header className="container mx-auto px-4 sm:px-6 lg:px-8 mb-10 md:mb-12 overflow-visible">
         <Link
           to="/projects"
           className="inline-flex items-center text-portfolio-primary hover:text-portfolio-accent mb-6 group"
@@ -145,7 +145,7 @@ const ProjectDetailPage = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-600 mb-3 leading-tight pb-3"
+          className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-600 mb-3 leading-tight"
         >
           {project.title}
         </motion.h1>
@@ -153,7 +153,7 @@ const ProjectDetailPage = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-lg sm:text-xl text-portfolio-muted-foreground"
+          className="text-lg sm:text-xl text-portfolio-muted-foreground m-3"
         >
           {project.category}
         </motion.p>

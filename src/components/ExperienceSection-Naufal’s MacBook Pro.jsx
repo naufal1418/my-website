@@ -10,13 +10,10 @@ const experiences = [
     companyLink: "https://tutorlim.com.au",
     period: "June 2023 - Dec 2024",
     location: "Australia",
+    description:
+      "Teaching statistical concepts and programming languages to university students. Developed customized learning materials and mentored 50+ students.",
     aboutthecompany:
-      "Tutor Lim is an Australian tutoring company specializing in personalized, high-quality education for university and high school students, focusing on STEM subjects like math, engineering, and science, with both in-person and online services. ",
-    description: [
-      "Mentored over 50 students in statistical analysis and data interpretation using Python and SQL.",
-      "Designed tailored learning plans and created data-driven reports to guide teaching strategies.",
-      "Simplified complex data concepts into practical applications for diverse learners.",
-    ],
+      "Teaching statistical concepts and programming languages to university students. Developed customized learning materials and mentored 50+ students.",
     tags: [
       "Bayesian Statistics",
       "Computing Theory",
@@ -32,13 +29,9 @@ const experiences = [
     period: "Sep 2018 - Jan 2022",
     location: "Trivandrum, India",
     aboutthecompany:
-      "Quest Global, headquartered in Singapore, is a company that provides engineering solutions to renowned clients such as Airbus, Philips, HP, Hitachi, GE, and others. ",
-    description: [
-      "Designed Windows applications for medical imaging devices using DICOM formats and SQL Server.",
-      "Deployed on-site to collaborate with clients in development, maintenance, testing, and bug fixing.",
-      "Prepared comprehensive performance reports across 3+ client departments.",
-      "Analysed client feedback to inform system enhancements and compliance improvements.",
-    ],
+      "Teaching statistical concepts and programming languages to university students. Developed customized learning materials and mentored 50+ students.",
+    description:
+      "Developed and maintained Windows applications for medical devices using Visual C++, C#.NET, and WPF. Led critical projects ensuring compliance with medical software regulations.",
     tags: [
       "C++",
       "C#.NET",
@@ -73,7 +66,7 @@ const ExperienceSection = () => {
         subtitle="Building impactful solutions across industries"
       />
       <div className="relative container mx-auto px-4 sm:px-0">
-        <div className="absolute left-[15%] top-0 bottom-0 w-1 bg-portfolio-secondary/30 z-0"></div>
+        <div className="absolute left-[20%] top-0 bottom-0 w-1 bg-portfolio-secondary/30 z-0"></div>
 
         <div className="space-y-12 md:space-y-16">
           {experiences.map((exp, index) => (
@@ -85,7 +78,7 @@ const ExperienceSection = () => {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="relative pl-12 sm:pl-0"
             >
-              <div className="absolute left-[15%] top-0 transform -translate-x-1/2 flex items-center sm:flex-col z-10">
+              <div className="absolute left-[20%] top-0 transform -translate-x-1/2 flex items-center sm:flex-col z-10">
                 <div className="absolute left-0 sm:left-1/2 top-1 transform -translate-x-2.5 translate-y-10 w-6 h-6 bg-portfolio-primary rounded-full border-4 border-portfolio-background z-20"></div>
                 <div className="hidden sm:block absolute top-10 left-[calc(80%-2rem)] transform -translate-x-full  text-s font-semibold text-portfolio-accent bg-card px-2 py-1 rounded-md shadow-md whitespace-nowrap">
                   {exp.period}
@@ -93,7 +86,7 @@ const ExperienceSection = () => {
               </div>
 
               <div className="flex sm:justify-center">
-                <div className="sm:w-[calc(70%-3rem)]">
+                <div className="sm:w-[calc(50%-3rem)]">
                   <Card
                     className={`w-full shadow-xl hover:shadow-portfolio-primary/40 transition-all duration-300 border-transparent hover:border-portfolio-primary/50`}
                   >
@@ -109,15 +102,13 @@ const ExperienceSection = () => {
                           {exp.period}
                         </span>
                       </div>
-                      <p className="text-portfolio-accent text-lg font-medium hover:text-foreground transition-colors duration-300 text-sm lg:text-base inline-block">
+                      <p className="text-portfolio-accent text-lg font-medium hover:text-white/10">
                         <a
                           href={exp.companyLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="relative group inline-block"
                         >
                           {exp.company}
-                          <span className="absolute bottom-0 left-0 h-0.5 bg-portfolio-primary w-0 group-hover:w-full transition-all duration-300 ease-out"></span>
                         </a>
                       </p>
 
@@ -137,12 +128,9 @@ const ExperienceSection = () => {
                       <p className="text-portfolio-accent text-m font-semibold">
                         Role Description
                       </p>
-
-                      <ul className="list-disc list-inside text-portfolio-card-foreground leading-relaxed text-sm sm:text-base">
-                        {exp.description.map((topic) => (
-                          <li key={topic}>{topic}</li>
-                        ))}
-                      </ul>
+                      <p className="text-portfolio-card-foreground leading-relaxed text-sm sm:text-base">
+                        {exp.description}
+                      </p>
                       <div className="flex flex-wrap gap-2">
                         {exp.tags.map((tag) => (
                           <span

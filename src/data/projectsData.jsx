@@ -1,96 +1,262 @@
-import React from 'react';
-import { Code as LucideCode, Database, BarChart3, BrainCircuit, Paintbrush } from 'lucide-react';
+import React from "react";
+import {
+  Code as LucideCode,
+  Database,
+  BarChart3,
+  BrainCircuit,
+  Paintbrush,
+} from "lucide-react";
 
 export const allProjectsData = [
   {
-    id: 'peak-energy',
-    title: 'Peak Energy Prediction System',
-    category: 'Machine Learning',
-    description: 'A sophisticated machine learning system designed to predict energy consumption patterns for the South West Interconnected System (SWIS).',
-    tags: ['Python', 'XGBoost', 'Time Series', 'Pandas', 'Scikit-learn', 'Flask', 'React', 'API'],
-    imageUrlKey: 'mlSystem',
-    liveLink: '#', // Placeholder, update if live
-    viewCodeLink: 'https://github.com/naufaln18/Peak-Energy-Demand-Forecast',
-    longDescription: "This project aimed to forecast peak energy demand critical for grid stability and resource allocation. I developed a robust pipeline involving data preprocessing, feature engineering from historical consumption and weather data, model training with XGBoost, and hyperparameter tuning. The model was exposed via a Flask API and integrated with a React-based dashboard for visualization and reporting.",
-    challenges: "Handling large datasets, feature selection for optimal model performance, and ensuring near real-time prediction capabilities were key challenges.",
-    learnings: "Gained deep insights into time series forecasting, ensemble methods, and MLOps practices for deploying ML models.",
-    client: "Academic Research Project",
+    id: "peak-energy",
+    title: "Peak Energy Prediction System",
+    category: "Machine Learning",
+    description:
+      "A sophisticated machine learning system designed to predict energy consumption patterns for the South West Interconnected System (SWIS).",
+    tags: [
+      "XGBoost",
+      "Energy Forecasting",
+      "Feature Engineering",
+      "Machine Learning",
+      "Python",
+      "Weather API",
+      "Data Visualization",
+      "RMSE",
+      "Data Pipeline",
+    ],
+    imageUrlKey: "mlSystem",
+    liveLink: "#", // Placeholder, update if live
+    viewCodeLink: "https://github.com/naufal1418/peak_energy_prediction",
+    longDescription:
+      "A machine learning project aimed at forecasting peak electricity demand days in Western Australia using 15 years of hourly energy and weather data. The model helps businesses reduce costs during high-demand periods by predicting the top four peak days in the summer. Techniques like XGBoost and feature engineering were used to capture time-dependent patterns, achieving high accuracy and interpretability. Forecasts are further enhanced with real-time weather API integration.",
+    challenges:
+      "Capturing temporal patterns in energy demand, working with limited weather feature availability, and ensuring interpretable yet accurate peak day predictions were key challenges.",
+    learnings:
+      "Understanding the significance of time-based feature engineering, evaluating model performance beyond accuracy metrics, and balancing interpretability with predictive power were key learnings.",
+    client: "Data Analysis Australia (Capestone Project)",
     timeline: "6 Months (2022)",
     features: [
-        { name: "Time Series Forecasting", description: "Utilized XGBoost for accurate prediction of energy peaks." },
-        { name: "Data Pipeline", description: "Automated data ingestion, preprocessing, and feature engineering." },
-        { name: "API Integration", description: "Flask API for model serving and React frontend for visualization." },
-        { name: "Performance Optimization", description: "Focused on model accuracy and inference speed." }
-    ]
+      {
+        name: "Peak Day Forecasting",
+        description:
+          "Predicted peak energy consumption days using historical data and weather patterns.",
+      },
+      {
+        name: "Machine Learning Model",
+        description:
+          "Implemented XGBoost for robust and interpretable energy demand forecasting.",
+      },
+      {
+        name: "Time-Based Feature Engineering",
+        description:
+          "Extracted temporal patterns using date-time features like hour, day, and seasonality.",
+      },
+      {
+        name: "Weather API Integration",
+        description:
+          "Fetched 14-day and 48-hour forecasts using external APIs for forward prediction.",
+      },
+      {
+        name: "Performance Evaluation",
+        description:
+          "Assessed model using RMSE and MAPE to ensure prediction quality.",
+      },
+      {
+        name: "Visualization",
+        description:
+          "Plotted predicted vs actual energy demand to validate model performance.",
+      },
+    ],
   },
   {
-    id: 'qa-model',
-    title: 'Advanced QA Model (NLP)',
-    category: 'Deep Learning',
-    description: 'Developed a cutting-edge natural language processing framework leveraging attention mechanisms (Transformers/BERT) for intelligent question answering.',
-    tags: ['Python', 'PyTorch', 'NLP', 'Transformers', 'BERT', 'Hugging Face'],
-    imageUrlKey: 'nlpModel',
-    liveLink: '#', // Placeholder
-    viewCodeLink: 'https://github.com/naufaln18/Advanced-QA-Model-with-Attention',
-    longDescription: "The goal was to build a system capable of understanding and answering complex questions based on a given context. This involved fine-tuning pre-trained Transformer models like BERT on SQuAD-like datasets. Significant effort went into data preprocessing, model optimization for inference speed, and evaluating performance using metrics like F1 score and Exact Match.",
-    challenges: "Managing computational resources for training large models, mitigating bias in datasets, and achieving high accuracy on diverse question types.",
-    learnings: "Mastered Transformer architectures, transfer learning techniques in NLP, and the intricacies of building end-to-end question-answering systems.",
-    client: "Personal Research",
+    id: "qa-model",
+    title: "Advanced QA Model (NLP)",
+    category: "Deep Learning",
+    description:
+      "A deep learning-based Question Answering system using Bi-RNNs, GRU, and attention mechanism on the WikiQA dataset.",
+    tags: [
+      "Question Answering",
+      "WikiQA",
+      "NLP",
+      "Bi-RNN",
+      "GRU",
+      "Attention Mechanism",
+      "TF-IDF",
+      "Word2Vec",
+      "POS Tagging",
+      "Named Entity Recognition",
+      "Python",
+      "Ablation Study",
+    ],
+    imageUrlKey: "nlpModel",
+    liveLink: "#", // Placeholder
+    viewCodeLink: "https://github.com/naufal1418/QA_Model",
+    longDescription:
+      "A deep learning-based Question Answering system built on the Microsoft Research WikiQA dataset. The project combines Bi-directional RNNs, GRU-based document modeling, and an attention mechanism to predict answer relevance for open-domain questions. It leverages advanced NLP preprocessing techniques including Word2Vec embeddings, POS tagging, NER, lemmatization, and TF-IDF to generate rich contextual representations and delivers high accuracy through extensive ablation studies and hyperparameter tuning.",
+    challenges:
+      "Handling complex question-document pairings, engineering effective input features, and designing an interpretable attention-based sequence model were key challenges.",
+    learnings:
+      "Deepened understanding of attention mechanisms in QA tasks, refined NLP preprocessing workflows, and learned the impact of ablation studies for model interpretability and tuning.",
+    client: "Academic Project",
     timeline: "4 Months (2023)",
     features: [
-        { name: "Transformer-based Model", description: "Leveraged BERT for contextual understanding." },
-        { name: "Fine-tuning", description: "Adapted pre-trained models for specific QA tasks." },
-        { name: "Performance Evaluation", description: "Rigorous testing using F1 and Exact Match scores." },
-        { name: "Scalable Architecture", description: "Designed for handling large text corpora." }
-    ]
+      {
+        name: "Question Summary Model",
+        description:
+          "Used Bi-directional RNNs to encode contextual information from user questions.",
+      },
+      {
+        name: "Document Modeling",
+        description:
+          "Processed candidate answer documents with GRU architecture and embedding layers.",
+      },
+      {
+        name: "Attention Mechanism",
+        description:
+          "Applied attention over document tokens using question summaries to improve focus.",
+      },
+      {
+        name: "Advanced NLP Preprocessing",
+        description:
+          "Implemented POS tagging, NER, lemmatization, and TF-IDF to enrich document features.",
+      },
+      {
+        name: "Embedding Techniques",
+        description:
+          "Utilized Word2Vec Skip-Gram embeddings to represent input tokens in semantic space.",
+      },
+      {
+        name: "Ablation Testing",
+        description:
+          "Performed embedding, attention, and hyperparameter ablation to evaluate model performance.",
+      },
+    ],
   },
   {
-    id: 'portfolio-website-project',
-    title: 'Interactive Portfolio Website',
-    category: 'Web Development',
-    description: 'This very portfolio! A modern, responsive single-page application built with React and Tailwind CSS, featuring smooth animations.',
-    tags: ['React', 'TailwindCSS', 'Framer Motion', 'JavaScript', 'Responsive Design', 'Vite'],
-    imageUrlKey: 'portfolioSite',
-    liveLink: '/', 
-    viewCodeLink: 'https://github.com/naufaln18/Portfolio-Website-React-Tailwind',
-    longDescription: "Designed and developed this personal portfolio to showcase my skills and projects. Focused on creating a visually appealing and intuitive user interface with modern design principles. Implemented features like dark/light mode, smooth scrolling, and responsive layouts to ensure accessibility across devices. Utilized Vite for fast development and Framer Motion for engaging animations.",
-    challenges: "Ensuring cross-browser compatibility, optimizing performance for animations, and structuring components for maintainability and reusability.",
-    learnings: "Enhanced skills in frontend development with React, advanced TailwindCSS utility-first styling, and implementing complex, performant user interactions with Framer Motion. Deepened understanding of modern JavaScript and build tools.",
-    client: "Personal Project",
-    timeline: "Ongoing",
-     features: [
-        { name: "Responsive Design", description: "Adapts seamlessly to all screen sizes." },
-        { name: "Dark/Light Mode", description: "User-selectable theme preference." },
-        { name: "Smooth Animations", description: "Engaging transitions powered by Framer Motion." },
-        { name: "Component-Based Architecture", description: "Modular and maintainable codebase using React." }
-    ]
-  },
-  {
-    id: 'bi-dashboard',
-    title: 'Sales Performance BI Dashboard',
-    category: 'Business Intelligence',
-    description: 'Designed and implemented an interactive Power BI dashboard to track key sales metrics, providing actionable insights for business decision-making.',
-    tags: ['Power BI', 'DAX', 'Data Modeling', 'Data Visualization', 'SQL'],
-    imageUrlKey: 'biDashboard',
-    liveLink: '#', // Typically internal
-    viewCodeLink: null, 
-    longDescription: "This project involved connecting to multiple data sources (SQL databases, Excel files), transforming and modeling data, and creating compelling visualizations in Power BI. The dashboard included KPIs for sales revenue, growth trends, regional performance, and product analysis. Utilized DAX for complex calculations and measures. Focused on user-centric design for easy interpretation by stakeholders.",
-    challenges: "Integrating disparate data sources, ensuring data accuracy and consistency, and designing visualizations that are both informative and easy to understand for non-technical users. Optimizing DAX queries for large datasets.",
-    learnings: "Strengthened expertise in data modeling, advanced DAX query writing, and the art of storytelling with data through effective dashboard design. Gained experience in stakeholder communication and requirement gathering for BI solutions.",
-    client: "Corporate Project (Simulated)",
-    timeline: "3 Months (2023)",
+    id: "portfolio-website-project",
+    title: "Business Showcase Website",
+    category: "Web Development",
+    description:
+      "A responsive React + Vite website built for a migration consultancy, featuring client portal integration, form handling, and seamless deployment via Netlify.",
+    tags: [
+      "React",
+      "TailwindCSS",
+      "Framer Motion",
+      "JavaScript",
+      "Responsive Design",
+      "Vite",
+    ],
+    imageUrlKey: "portfolioSite",
+    liveLink: "/",
+    viewCodeLink: "https://github.com/naufal1418/ozwiz-migration",
+    longDescription:
+      "A professionally crafted website for a migration consultancy, built with React + Vite and styled using Tailwind CSS. It features a responsive layout, integrated contact forms using free form services, and a secure client portal for updating content without developer intervention. Hosted on Netlify, the entire solution leverages open-source and free tools, making it highly cost-effective while maintaining performance and design quality.",
+    challenges:
+      "Coordinating real-time content updates, optimizing responsive design across devices, and integrating third-party form services without backend support were key challenges.",
+    learnings:
+      "Gained experience in modern frontend frameworks, form handling with third-party APIs, and static site deployment using Git and Netlify. Enhanced skills in responsive design and user experience optimization.",
+    client: "Ozviz Migration",
+    timeline: "April 2025",
     features: [
-        { name: "Interactive Visualizations", description: "Drill-down capabilities and dynamic filtering." },
-        { name: "KPI Tracking", description: "Real-time monitoring of key sales metrics." },
-        { name: "Data Modeling", description: "Efficient data relationships for accurate reporting." },
-        { name: "Actionable Insights", description: "Designed to support data-driven decision-making." }
-    ]
+      {
+        name: "Responsive Web Design",
+        description:
+          "Built with Tailwind CSS to ensure a seamless user experience across devices.",
+      },
+      {
+        name: "React + Vite Setup",
+        description:
+          "Used a fast development environment with modern React tooling.",
+      },
+      {
+        name: "Client Portal Integration",
+        description:
+          "Connected the site to a client portal allowing dynamic content updates.",
+      },
+      {
+        name: "Form Handling",
+        description:
+          "Integrated free form services for secure contact submissions without a custom backend.",
+      },
+      {
+        name: "GitHub Integration",
+        description:
+          "Linked with GitHub for continuous version control and collaboration.",
+      },
+      {
+        name: "Netlify Deployment",
+        description:
+          "Deployed the static site using Netlify for free and fast hosting.",
+      },
+    ],
   },
+  // {
+  //   id: "bi-dashboard",
+  //   title: "Sales Performance BI Dashboard",
+  //   category: "Business Intelligence",
+  //   description:
+  //     "Designed and implemented an interactive Power BI dashboard to track key sales metrics, providing actionable insights for business decision-making.",
+  //   tags: ["Power BI", "DAX", "Data Modeling", "Data Visualization", "SQL"],
+  //   imageUrlKey: "biDashboard",
+  //   liveLink: "#", // Typically internal
+  //   viewCodeLink: null,
+  //   longDescription:
+  //     "This project involved connecting to multiple data sources (SQL databases, Excel files), transforming and modeling data, and creating compelling visualizations in Power BI. The dashboard included KPIs for sales revenue, growth trends, regional performance, and product analysis. Utilized DAX for complex calculations and measures. Focused on user-centric design for easy interpretation by stakeholders.",
+  //   challenges:
+  //     "Integrating disparate data sources, ensuring data accuracy and consistency, and designing visualizations that are both informative and easy to understand for non-technical users. Optimizing DAX queries for large datasets.",
+  //   learnings:
+  //     "Strengthened expertise in data modeling, advanced DAX query writing, and the art of storytelling with data through effective dashboard design. Gained experience in stakeholder communication and requirement gathering for BI solutions.",
+  //   client: "Corporate Project (Simulated)",
+  //   timeline: "3 Months (2023)",
+  //   features: [
+  //     {
+  //       name: "Interactive Visualizations",
+  //       description: "Drill-down capabilities and dynamic filtering.",
+  //     },
+  //     {
+  //       name: "KPI Tracking",
+  //       description: "Real-time monitoring of key sales metrics.",
+  //     },
+  //     {
+  //       name: "Data Modeling",
+  //       description: "Efficient data relationships for accurate reporting.",
+  //     },
+  //     {
+  //       name: "Actionable Insights",
+  //       description: "Designed to support data-driven decision-making.",
+  //     },
+  //   ],
+  // },
 ];
 
 export const projectImagePlaceholders = {
-  mlSystem: <img  alt="Peak Energy Prediction System abstract visualization" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://images.unsplash.com/photo-1604177420682-0c840feb01de" src="https://images.unsplash.com/photo-1604177420682-0c840feb01de" />,
-  nlpModel: <img  alt="Advanced QA Model abstract visualization" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://images.unsplash.com/photo-1549925245-f20a1bac6454" src="https://images.unsplash.com/photo-1549925245-f20a1bac6454" />,
-  portfolioSite: <img  alt="Portfolio Website design preview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://images.unsplash.com/photo-1518773553398-650c184e0bb3" src="https://images.unsplash.com/photo-1551033406-611cf9a28f67" />,
-  biDashboard: <img  alt="BI Dashboard showing charts and graphs" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://images.unsplash.com/photo-1516383274235-5f42d6c6426d" src="https://images.unsplash.com/photo-1516383274235-5f42d6c6426d" />,
+  mlSystem: (
+    <img
+      alt="Peak Energy Prediction System abstract visualization"
+      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+      src="/assets/images/peakEnergyPrediction.webp"
+    />
+  ),
+  nlpModel: (
+    <img
+      alt="Advanced QA Model abstract visualization"
+      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+      src="/assets/images/qaModel.webp"
+    />
+  ),
+  portfolioSite: (
+    <img
+      alt="Portfolio Website design preview"
+      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+      src="/assets/images/ozviz.webp"
+    />
+  ),
+  biDashboard: (
+    <img
+      alt="BI Dashboard showing charts and graphs"
+      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+      src="https://images.unsplash.com/photo-1516383274235-5f42d6c6426d"
+    />
+  ),
 };

@@ -7,7 +7,7 @@ const socialLinks = [
   {
     name: "GitHub",
     icon: <Github className="h-5 w-5" />,
-    href: "https://github.com/naufaln18",
+    href: "https://github.com/naufaln1418",
   },
   {
     name: "LinkedIn",

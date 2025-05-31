@@ -73,7 +73,7 @@ const ExperienceSection = () => {
         subtitle="Building impactful solutions across industries"
       />
       <div className="relative container mx-auto px-4 sm:px-0">
-        <div className="absolute left-[15%] top-0 bottom-0 w-1 bg-portfolio-secondary/30 z-0"></div>
+        <div className="absolute left-[15%] sm: left-[12%] top-0 bottom-0 w-1 bg-portfolio-secondary/30 z-0"></div>
 
         <div className="space-y-12 md:space-y-16">
           {experiences.map((exp, index) => (
@@ -85,7 +85,7 @@ const ExperienceSection = () => {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="relative pl-12 sm:pl-0"
             >
-              <div className="absolute left-[15%] top-0 transform -translate-x-1/2 flex items-center sm:flex-col z-10">
+              <div className="absolute left-[15%] sm: left-[8%] top-0 transform -translate-x-1/2 flex items-center sm:flex-col z-10">
                 <div className="absolute left-0 sm:left-1/2 top-1 transform -translate-x-2.5 translate-y-10 w-6 h-6 bg-portfolio-primary rounded-full border-4 border-portfolio-background z-20"></div>
                 <div className="hidden sm:block absolute top-10 left-[calc(80%-2rem)] transform -translate-x-full  text-s font-semibold text-portfolio-accent bg-card px-2 py-1 rounded-md shadow-md whitespace-nowrap">
                   {exp.period}

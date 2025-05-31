@@ -41,40 +41,74 @@ const ProjectDetailPage = () => {
 
   const getTechIcon = (techName) => {
     const name = techName.toLowerCase();
-    if (
-      name.includes("react") ||
-      name.includes("javascript") ||
-      name.includes("vite")
-    )
-      return <LucideCode className="h-6 w-6 text-sky-500" />;
+    if (name.includes("react"))
+      return (
+        <img
+          src="/assets/logos/react.svg"
+          alt="Python Logo"
+          className="h-5 w-5"
+        />
+      );
     if (name.includes("python"))
       return (
         <img
           src="/assets/logos/python.svg"
           alt="Python Logo"
-          className="h-6 w-6"
+          className="h-5 w-5"
         />
       );
-    if (
-      name.includes("pytorch") ||
-      name.includes("nlp") ||
-      name.includes("bert") ||
-      name.includes("transformers")
-    )
-      return <BrainCircuit className="h-6 w-6 text-blue-500" />;
+
+    if (name.includes("javascript"))
+      return (
+        <img
+          src="/assets/logos/javascript.svg"
+          alt="JavaScript Logo"
+          className="h-5 w-5"
+        />
+      );
+    if (name.includes("vite"))
+      return (
+        <img src="/assets/logos/vite.svg" alt="Vite Logo" className="h-5 w-5" />
+      );
+
+    if (name.includes("responsive design"))
+      return (
+        <img
+          src="/assets/logos/responsivedesign.svg"
+          alt="Responsive Design Logo"
+          className="h-5 w-5"
+        />
+      );
+    if (name.includes("pytorch"))
+      return (
+        <img
+          src="/assets/logos/pytorch.svg"
+          alt="Vite Logo"
+          className="h-5 w-5"
+        />
+      );
+    if (name.includes("xgboost"))
+      return (
+        <img
+          src="/assets/logos/xgboost.png"
+          alt="Vite Logo"
+          className="h-5 w-5"
+        />
+      );
+
+    if (name.includes("energy forecasting"))
+      return (
+        <img
+          src="/assets/logos/energyforecast.svg"
+          alt="Vite Logo"
+          className="h-5 w-5"
+        />
+      );
     if (name.includes("tailwind"))
       return (
         <img
           src="/assets/logos/tailwind.svg"
           alt="Tailwind CSS Logo"
-          className="h-6 w-6"
-        />
-      );
-    if (name.includes(".net"))
-      return (
-        <img
-          src="/assets/logos/dotnet.svg"
-          alt=".NET Logo"
           className="h-6 w-6"
         />
       );
@@ -86,6 +120,84 @@ const ProjectDetailPage = () => {
           className="h-6 w-6"
         />
       );
+    if (name.includes(".net"))
+      return (
+        <img
+          src="/assets/logos/dotnet.svg"
+          alt=".NET Logo"
+          className="h-6 w-6"
+        />
+      );
+
+    if (name.includes("api"))
+      return (
+        <img src="/assets/logos/api.svg" alt="API Logo" className="h-6 w-6" />
+      );
+
+    if (name.includes("numpy"))
+      return (
+        <img
+          src="/assets/logos/numpy.svg"
+          alt="numpy Logo"
+          className="h-6 w-6"
+        />
+      );
+
+    if (name.includes("pandas"))
+      return (
+        <img
+          src="/assets/logos/pandas.svg"
+          alt="PANDAS Logo"
+          className="h-6 w-6"
+        />
+      );
+
+    if (name.includes("scikit-learn"))
+      return (
+        <img
+          src="/assets/logos/scikitlearn.svg"
+          alt="Scikit-learn Logo"
+          className="h-6 w-6"
+        />
+      );
+
+    if (name.includes("netlify"))
+      return (
+        <img
+          src="/assets/logos/netlify.svg"
+          alt="Netlify Logo"
+          className="h-6 w-6"
+        />
+      );
+
+    if (name.includes("seo"))
+      return (
+        <img src="/assets/logos/seo.svg" alt="SEO Logo" className="h-6 w-6" />
+      );
+
+    if (name.includes("feature engineering"))
+      return (
+        <img
+          src="/assets/logos/featureengineering.png"
+          alt="Feature Engineering Logo"
+          className="h-6 w-6"
+        />
+      );
+    if (name.includes("machine learning"))
+      return (
+        <img
+          src="/assets/logos/machinelearning.svg"
+          alt="Machine Learning Logo"
+          className="h-6 w-6"
+        />
+      );
+
+    if (name.includes("nlp"))
+      return (
+        <img src="/assets/logos/nlp.png" alt="nlp Logo" className="h-6 w-6" />
+      );
+    if (name.includes("bert") || name.includes("transformers"))
+      return <BrainCircuit className="h-6 w-6 text-blue-500" />;
     if (
       name.includes("sql") ||
       name.includes("database") ||
@@ -346,7 +458,7 @@ const ProjectDetailPage = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        View Live Project{" "}
+                        View Website{" "}
                         <ExternalLink className="ml-2 h-4 w-4 group-hover:rotate-3 transition-transform" />
                       </a>
                     </Button>

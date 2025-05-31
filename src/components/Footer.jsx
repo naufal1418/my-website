@@ -1,5 +1,12 @@
 import React from "react";
-import { Github, Linkedin, Twitter, Code } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Twitter,
+  Code,
+  Facebook,
+  Instagram,
+} from "lucide-react";
 import { motion } from "framer-motion";
 import { Link as RouterLink, useLocation, useNavigate } from "react-router-dom";
 
@@ -12,12 +19,23 @@ const socialLinks = [
   {
     name: "LinkedIn",
     icon: <Linkedin className="h-5 w-5" />,
-    href: "https://linkedin.com/in/naufal-nizarudeen",
+    href: "https://www.linkedin.com/in/naufal-n/",
   },
   {
     name: "Twitter",
     icon: <Twitter className="h-5 w-5" />,
-    href: "https://x.com/NaufalNizar18",
+    href: "https://twitter.com/Naufal18Naufal",
+  },
+
+  {
+    name: "Facebook",
+    icon: <Facebook className="h-5 w-5" />,
+    href: "https://www.facebook.com/Naufalknight",
+  },
+  {
+    name: "Instagram",
+    icon: <Instagram className="h-5 w-5" />,
+    href: "https://www.instagram.com/__.the__lone__wolf._",
   },
 ];
 
@@ -65,7 +83,7 @@ const Footer = () => {
               className="flex items-center space-x-2 text-xl font-bold text-foreground hover:text-portfolio-primary transition-colors"
             >
               <Code className="h-7 w-7 text-portfolio-primary" />
-              <span>Naufal.dev</span>
+              <span>Naufal Nizarudeen</span>
             </RouterLink>
             <p className="text-sm text-portfolio-muted-foreground max-w-xs">
               Crafting digital experiences with passion and precision.
@@ -102,7 +120,7 @@ const Footer = () => {
           </div>
 
           <div className="md:col-span-1">
-            <p className="font-semibold text-card-foreground mb-3">Connect</p>
+            <p className="font-semibold text-card-foreground mb-3 ">Connect</p>
             <div className="flex space-x-4 justify-center md:justify-start">
               {socialLinks.map((link) => (
                 <motion.a

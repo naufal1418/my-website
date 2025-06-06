@@ -133,7 +133,7 @@ export const allProjectsData = [
   },
   {
     id: "portfolio-website-project",
-    title: "Business Showcase Website",
+    title: "Website - Ozviz Migration",
     category: "Web Development",
     description:
       "A responsive React + Vite website built for a migration consultancy, featuring client portal integration, form handling, and seamless deployment via Netlify.",
@@ -188,6 +188,66 @@ export const allProjectsData = [
         name: "Netlify Deployment",
         description:
           "Deployed the static site using Netlify for free and fast hosting.",
+      },
+    ],
+  },
+  {
+    id: "krz-engineering-website-project",
+    title: "Website - KRZ Engineering",
+    category: "Web Development",
+    description:
+      "A modern and SEO-ready website built for a mechanical engineering company, featuring responsive design, fast performance, and Netlify deployment.",
+    tags: [
+      "React",
+      "TailwindCSS",
+      "JavaScript",
+      "Vite",
+      "Netlify",
+      "Responsive Design",
+      "SEO",
+      "Performance Optimization",
+    ],
+    imageUrlKey: "krzEngineeringSite",
+    liveLink: "https://www.krzengineering.com.au/",
+    viewCodeLink: "https://github.com/naufal1418/krz-engineering",
+    longDescription:
+      "A responsive business website developed for KRZ Engineering, showcasing their services and expertise in mechanical and structural fabrication. Built using React + Vite and styled with Tailwind CSS, the site is optimized for speed, mobile usability, and SEO best practices. Hosted on Netlify with fast global delivery and seamless deployment workflows.",
+    challenges:
+      "Ensuring optimal Core Web Vitals scores, integrating SEO metadata correctly, and refining responsive layout across breakpoints were major focuses during development.",
+    learnings:
+      "Improved skills in web performance tuning, on-page SEO, and deploying scalable, static sites. Gained experience using Lighthouse audits and preload strategies to enhance LCP and UX.",
+    client: "KRZ Engineering",
+    timeline: "June 2025",
+    features: [
+      {
+        name: "Responsive Design",
+        description:
+          "Built with Tailwind CSS to ensure cross-device compatibility and fluid layouts.",
+      },
+      {
+        name: "Optimized Performance",
+        description:
+          "Focused on Largest Contentful Paint (LCP) and preload strategies to improve load speed.",
+      },
+      {
+        name: "SEO & Meta Tags",
+        description:
+          "Implemented structured metadata, custom page titles, and sitemap/robots.txt for improved search visibility.",
+      },
+      {
+        name: "Static Deployment",
+        description:
+          "Deployed to Netlify with version control via GitHub for fast, reliable hosting.",
+      },
+      {
+        name: "Accessibility-Friendly",
+        description:
+          "Used semantic HTML and tested for visual clarity and keyboard navigation.",
+      },
+      {
+        name: "Clean UI",
+        description:
+          "Minimalist design focused on highlighting services, project history, and contact details.",
       },
     ],
   },
@@ -250,6 +310,14 @@ export const projectImagePlaceholders = {
       alt="Portfolio Website design preview"
       class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
       src="/assets/images/ozviz.webp"
+    />
+  ),
+
+  krzEngineeringSite: (
+    <img
+      alt="Portfolio Website design preview"
+      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+      src="/assets/images/krz.jpg"
     />
   ),
   biDashboard: (

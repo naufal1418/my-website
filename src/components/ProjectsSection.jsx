@@ -57,7 +57,7 @@ const featuredProjects = [
   },
   {
     id: "portfolio-website-project", // Changed ID to avoid conflict if "portfolio-website" is used as a general page ID
-    title: "Business Showcase Website",
+    title: "Website - Ozviz Migration",
     category: "Web Development",
     description:
       "A professionally crafted website for a migration consultancy, built with React + Vite and styled using Tailwind CSS. It features a responsive layout, integrated contact forms using free form services, and a secure client portal for updating content without developer intervention. Hosted on Netlify, the entire solution leverages open-source and free tools, making it highly cost-effective while maintaining performance and design quality.",
@@ -76,6 +76,27 @@ const featuredProjects = [
     imageUrlKey: "portfolioSite",
     viewCodeLink: "https://github.com/naufal1418/ozwiz-migration",
     learnMoreLink: "/project/portfolio-website-project",
+  },
+  {
+    id: "krz-engineering-website-project",
+    title: "Website - KRZ Engineering",
+    category: "Web Development",
+    description:
+      "A performance-optimized website built for a mechanical engineering company using React + Vite, styled with Tailwind CSS. The site is fully responsive, SEO-optimized, and deployed on Netlify with continuous version control via GitHub.",
+    tags: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Netlify",
+      "Git",
+      "GitHub",
+      "Responsive Design",
+      "On-Page SEO",
+      "Performance Optimization",
+    ],
+    imageUrlKey: "krzEngineeringSite",
+    viewCodeLink: "https://github.com/naufal1418/krzengineering", // update if needed
+    learnMoreLink: "/project/krz-engineering-website-project",
   },
 ];
 
@@ -99,6 +120,13 @@ const projectImagePlaceholders = {
       alt="Portfolio Website design preview"
       class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
       src="/assets/images/ozviz.webp"
+    />
+  ),
+  krzEngineeringSite: (
+    <img
+      alt="Portfolio Website design preview"
+      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+      src="/assets/images/krz.jpg"
     />
   ),
 };
